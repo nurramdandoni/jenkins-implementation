@@ -1,0 +1,23 @@
+{
+  "name": "jenkins-implementation",
+  "version": "1.0.0",
+  "description": "Uji Coba CI/CD dengan Jenkins, Cloud dan Vhost di cyber panel server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurramdandoni/jenkins-implementation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurramdandoni/jenkins-implementation/issues"
+  },
+  "homepage": "https://github.com/nurramdandoni/jenkins-implementation#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
