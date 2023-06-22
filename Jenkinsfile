@@ -6,7 +6,7 @@ pipeline {
             steps {
                 // Menjalankan perintah Docker
                 script {
-                    docker.build('image_test:lates').push()
+                    docker.build('image_test:latest').push()
                 }
             }
         }
@@ -15,7 +15,7 @@ pipeline {
             steps {
                 // Menjalankan kontainer Docker porthost:port container
                 script {
-                    docker.image('image_test:lates').run('-p 3000:3000 --name nama_kontainer_test')
+                    docker.image('image_test:latest').run('-p 3000:3000 --name nama_kontainer_test')
                 }
             }
         }
