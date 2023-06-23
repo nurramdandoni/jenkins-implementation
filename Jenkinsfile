@@ -2,21 +2,9 @@ pipeline {
     agent any
     
     stages {
-        stage('Build') {
+        stage('Hello World') {
             steps {
-                // Langkah-langkah untuk melakukan build
-            }
-        }
-        
-        stage('Test') {
-            steps {
-                // Langkah-langkah untuk melakukan pengujian
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                // Langkah-langkah untuk melakukan deploy
+                echo 'Hello, World!'
             }
         }
     }
