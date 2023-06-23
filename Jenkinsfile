@@ -2,21 +2,28 @@ pipeline {
     agent any
     
     stages {
-        stage('Hello World') {
+        stage('Pull Repositories') {
             steps {
                 echo 'Hello, World Koding!'
             }
         }
         
+        stage('Stop Container') {
+            steps {
+                echo 'Stopping the running container...'
+                sh 'docker stop mycontainer || true'
+                sh 'docker rm mycontainer || true'
+                echo 'Container stopped.'
+            }
+        }
+        
         stage('Docker Images') {
             steps {
-                // Menghapus image sebelumnya
-                sh 'docker rmi myimage:latest'
-                echo 'Menampilkan hasil images'
-                sh 'docker images'
                 echo 'Building Docker images...'
-                // Langkah-langkah untuk membangun Docker images
-                sh 'docker images'
+                
+                // Menghapus image sebelumnya
+                sh 'docker rmi myimage:latest || true'
+                
                 echo 'Proses Build'
                 sh 'docker build -t myimage:latest .'
                 echo 'Menampilkan hasil images'
@@ -26,7 +33,9 @@ pipeline {
         
         stage('Deploy') {
             steps {
-                echo 'Hello again!'
+                echo 'Running the container...'
+                sh 'docker run -d --name mycontainer -p 3000:3001 myimage:latest'
+                echo 'Container is now running.'
             }
         }
     }
