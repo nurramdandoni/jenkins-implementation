@@ -4,7 +4,7 @@ const port = 4000;
 
 // Endpoint "welcome"
 app.get('/welcome', (req, res) => {
-  res.send('Selamat datang di API sederhana With Jenkins (Auto Deploy Every Commit/ Merge)!');
+  res.send('Selamat datang di API sederhana With Jenkins (Auto Deploy Every Commit/ Merge), Semangattttttt!');
 });
 
 // Menjalankan server
