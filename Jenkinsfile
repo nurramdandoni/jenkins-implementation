@@ -36,6 +36,7 @@ pipeline {
                 echo 'Running the container...'
                 sh 'docker run -d --name mycontainer -p 4000:3001 myimage:latest'
                 echo 'Container is now running.'
+                sh 'docker ps'
             }
         }
     }
