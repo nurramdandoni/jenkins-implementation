@@ -1,11 +1,22 @@
 pipeline {
     agent any
-
+    
     stages {
-        stage('Pull Project') {
+        stage('Build') {
             steps {
-                // Menjalankan perintah Pull
-                git branch: 'main', url: 'https://github.com/nurramdandoni/jenkins-implementation.git'
+                // Langkah-langkah untuk melakukan build
+            }
+        }
+        
+        stage('Test') {
+            steps {
+                // Langkah-langkah untuk melakukan pengujian
+            }
+        }
+        
+        stage('Deploy') {
+            steps {
+                // Langkah-langkah untuk melakukan deploy
             }
         }
     }
